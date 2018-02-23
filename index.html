@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Interactive Portugal and Spain Travel Map SVG/RaphaëlJs</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="lib/raphael-min.js"></script>
+  <script type="text/javascript" src="lib/spain-travel-map.js"></script>
+  <style type="text/css">
+    body {
+      background: #fff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      text-align: center;
+      color: #555;
+    }
+    h1 {
+      font-size: 25px;
+      padding: 30px 0 10px;
+    }
+    p {
+      padding-bottom: 30px;
+    }
+    .agile img {
+      border: none;
+      margin-top: 10px;
+    }
+    .agile {
+      padding: 50px;
+      font-size: 15px;
+    }
+    a {
+      color: #66bbdd;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interactive Iberian Peninsula Travel Map for public display of our private tours in Spain and Portugal</h1>
+  <p>Portugal and Spain interactive travel map built on a SVG layer and <a href="http://raphaeljs.com" target="_blank">RaphaelJs library</a>.</p>
+  <a href="https://github.com/Silvi01/Spain_Travel_Map"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+  <div id="map"></div>
+  <div class="agile">
+    Coded by <a href="http://silvi01.es" title="Silvio Villegas" target="_blank">Silvio Villegas</a> en<br/>
+    <a href="https://terratraditionsconsulting.com" title="Boutique DMC & Luxury Private Tours in Spain & Portugal" target="_blank">
+      <img src="https://www.terratraditionsconsulting.com/wp-content/uploads/2018/02/Luxury-Tours-Spain_Logo_TerraTraditions.svg" alt="Terra Traditions" width="200" height="200"/>
+    </a>
+  </div>
+  <script type="text/javascript">
+    new SpainMap({
+      id: 'map',
+      width: 700,
+      height: 500,
+      fillColor: "#eeeeee",
+      strokeColor: "#cccccc",
+      strokeWidth: 0.7,
+      selectedColor: "#66bbdd",
+      animationDuration: 200,
+      onClick: function(province, event) {
+        alert("You've chosen " + province.name);
+      }
+      //onMouseOver: function(province, event) {
+      //  console.log('Navigating through ' + province.name);
+      //},
+      //onMouseOut: function(province, event) {
+      //  console.log('Leaving ' + province.name);
+      //}
+    });
+  </script>
+</body>
