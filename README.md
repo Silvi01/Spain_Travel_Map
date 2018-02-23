@@ -3,7 +3,7 @@ Portugal and Spain interactive travel map built on a SVG layer and RaphaelJS Lib
 
 ## Demo
 
-[Demo](https://terratraditionsconsulting.com)
+[Demo: Terra Traditions - Private Tours](https://terratraditionsconsulting.com)
 
 ## Usage
 
